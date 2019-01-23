@@ -14,6 +14,9 @@ var middleware = (req, res, next) => {
 
 app.use(middleware)
 
+app.get('/stupid', (req, res) => {
+  res.status(200).send('stupid rooutes')
+})
 app.get('/*', deeplink({
   fallback: 'https://wwww.lalalab.com' + url,
   android_package_name: 'com.invaderscorp.polagram',
