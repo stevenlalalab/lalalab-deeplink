@@ -12,6 +12,9 @@ var middleware = (req, res, next) => {
   next(url)
 }
 
+app.use('/', (req, res, next) => {
+  next()
+})
 app.use(middleware)
 
 app.get('/favicon.ico', (req, res) => {
