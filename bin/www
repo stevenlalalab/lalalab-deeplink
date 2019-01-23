@@ -1,0 +1,10 @@
+#! /usr/bin/env node
+
+const http = require('http')
+const dotenv = require('dotenv')
+
+const { app } = require('../app.js')
+
+const port = 8888
+
+var server = http.createServer(app).listen(port)
